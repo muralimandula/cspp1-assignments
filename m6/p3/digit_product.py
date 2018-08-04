@@ -5,9 +5,9 @@ example:
 	output: 6
 '''
 PRODUCT = 1
-NUM = int(input())
+NUM = input()
 while NUM >= 1:
-    REM = int(NUM)%10
+    REM = NUM%10
     PRODUCT = PRODUCT * REM
     NUM = NUM/10
 print(PRODUCT)
