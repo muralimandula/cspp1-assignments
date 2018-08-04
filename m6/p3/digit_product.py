@@ -6,8 +6,18 @@ example:
 '''
 PRODUCT = 1
 NUM = int(input())
+TEMP = 0
+if NUM == 0:
+    print(NUM)
+
+elif NUM < 0:
+    NUM = -NUM
+    TEMP = 1
 while NUM >= 1:
     REM = NUM%10
-    PRODUCT = PRODUCT * REM
+    PRODUCT = PRODUCT * int(REM)
     NUM = NUM/10
-print(PRODUCT)
+if TEMP == 1:
+    print(-PRODUCT)
+elif NUM != 0:
+    print(PRODUCT)
