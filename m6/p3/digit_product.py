@@ -5,7 +5,7 @@ example:
 	output: 6
 '''
 PRODUCT = 1
-NUM = input()
+NUM = int(input())
 while NUM >= 1:
     REM = NUM%10
     PRODUCT = PRODUCT * REM
