@@ -23,14 +23,24 @@
 
 
 
-def payingDebtOffInAYear(balance, annualInterestRate):
+def payingdebt_offInAYear(balance, annualinterestRate):
+    """A function to calculate the lowest payment"""
+    payment = 0
+    balance_due = balance
+    while balance_due > 0:
+        payment += 10
+        balance_due = balance
+        for _ in range(1, 13):
+            unpaid_balance = balance_due - payment
+            balance_due = unpaid_balance*(1 + (annual_interestrate/12.0))
+    return payment
 	
 
 def main():
 	data = input()
 	data = data.split(' ')
 	data = list(map(float, data))
-	print(payingDebtOffInAYear(data[0],data[1]))
+	print(payingdebt_offInAYear(data[0],data[1]))
 	
 if __name__== "__main__":
 	main()
