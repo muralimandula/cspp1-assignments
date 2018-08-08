@@ -18,7 +18,7 @@ def payingdebt_offinayear(balance, annual_interestrate):
     monthly_interestrate = annual_interestrate/12.0
     payment_high = (balance*((1 + monthly_interestrate)**12))/12.0
     payment = (payment_high + payment_low)/2.0
-    epsilon = 0.05556
+    epsilon = 0.03
 
     while True:
         # print(bal_d(balance, payment, annual_interestrate))
