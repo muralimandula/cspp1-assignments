@@ -8,7 +8,7 @@ def sumofdigits(input_number):
     '''
     if  input_number == 0:
         return 0
-    return input_number%10 + sumofdigits(input_number//10)
+    return (input_number%10) + sumofdigits(input_number//10)
 
 def main():
     """Main Function"""
