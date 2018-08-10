@@ -12,13 +12,8 @@ def get_available_letters(letters_guessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
+    pass
 
-    import string
-    alphabets = string.ascii_lowercase
-    for char in letters_guessed:
-        if char in letters_guessed:
-            alphabets = alphabets.replace(char, "")
-    print(alphabets)
 
 
 def main():
@@ -30,7 +25,7 @@ def main():
     data = []
     for char in user_input:
         data.append(char[0])
-    get_available_letters(data)
+    print(get_available_letters(data))
 
 
 if __name__ == "__main__":
