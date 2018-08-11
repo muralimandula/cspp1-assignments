@@ -35,7 +35,7 @@ def create_social_network(data):
     '''
 
     # remove the pass below and start writing your code
-    print (data)
+    return data
 
 def main():
     '''
@@ -54,10 +54,9 @@ def main():
 
 #        else:
  #           adict[list_value[0]] = (list_value[1].extend(list_value[1].split(','))
-    print(adict)
  
 
-    create_social_network(adict)
+    print(create_social_network(adict))
 
 if __name__ == "__main__":
     main()
