@@ -9,7 +9,7 @@ def update_hand(hand_dictionary, word_data):
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
     a letter appears in 'word', 'hand' has at least as
-    many of that letter in it. 
+    many of that letter in it.
 
     Updates the hand: uses up the letters in the given word
     and returns the new hand, without those letters in it.
@@ -17,7 +17,7 @@ def update_hand(hand_dictionary, word_data):
     Has no side effects: does not modify hand.
 
     word: string
-    hand: dictionary (string -> int)    
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
     # TO DO ... <-- Remove this comment when you code this function
@@ -30,13 +30,12 @@ def main():
     """Main Function"""
     length_of_list = input()
     hand_dictionary = {}
-    for i in range(int(length_of_list)):
+    for _ in range(int(length_of_list)):
         data = input()
         list_in_hand = data.split()
         hand_dictionary[list_in_hand[0]] = int(list_in_hand[1])
     word_data = input()
-    update_hand(hand_dictionary,word_data)
-        
+    update_hand(hand_dictionary, word_data)
 
 
 if __name__ == "__main__":
