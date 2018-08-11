@@ -32,9 +32,7 @@ def unfollow(network, arg1, arg2):
   #      del network[arg1].values(arg2)
     if arg1 in network:
         network[arg1].remove(arg2)
-
     return network 
-
 def delete_person(network, arg1):
     '''
         2 arguments are passed to this function
@@ -50,13 +48,11 @@ def delete_person(network, arg1):
         del network[arg1]
         
     return network
-
-
 def main():
     '''
         handling testcase input and printing command
     '''
-    network = eval(input())
+    network = input()
     no_of_commands = int(input())
     for _ in range(int(no_of_commands)):
         command = input()
