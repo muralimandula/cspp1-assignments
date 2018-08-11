@@ -2,8 +2,9 @@
 '''
     Assignment-1 Create Social Network
 '''
+"""
 
-#def create_social_network(data):
+def create_social_network(data):
     '''
         The data argument passed to the function is a string
         It represents simple social network data
@@ -34,8 +35,8 @@
     '''
 
     # remove the pass below and start writing your code
-    pass
-"""
+    print (data)
+
 def main():
     '''
         handling testcase input and printing output
@@ -56,7 +57,7 @@ def main():
     print(adict)
  
 
- #   print(create_social_network(string))
+    create_social_network(adict)
 
 if __name__ == "__main__":
     main()
