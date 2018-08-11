@@ -4,7 +4,7 @@ i.e., it must not mutate the hand passed in. Before pasting your function defini
 be sure you've passed the appropriate tests in test_ps4a.py."""
 
 
-def updateHand(hand_dictionary, word_data):
+def update_hand(hand_dictionary, word_data):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -27,6 +27,7 @@ def updateHand(hand_dictionary, word_data):
     print(hand_dictionary)
 
 def main():
+    """Main Function"""
     length_of_list = input()
     hand_dictionary = {}
     for i in range(int(length_of_list)):
@@ -34,9 +35,9 @@ def main():
         list_in_hand = data.split()
         hand_dictionary[list_in_hand[0]] = int(list_in_hand[1])
     word_data = input()
-    updateHand(hand_dictionary,word_data)
+    update_hand(hand_dictionary,word_data)
         
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
