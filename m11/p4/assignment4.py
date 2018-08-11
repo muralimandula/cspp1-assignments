@@ -2,7 +2,7 @@
 #We are now ready to begin writing the code that interacts with the player. We'll be implementing the playHand function. This function allows the user to play out a single hand. First, though, you'll need to implement the helper calculateHandlen function, which can be done in under five lines of code.
 
 
-def calculateHandlen(hand_list):
+def hand_value(hand_list):
     """ 
     Returns the length (number of letters) in the current hand.
     
@@ -16,15 +16,16 @@ def calculateHandlen(hand_list):
     return sum_val    
 
 def main():
-	n=input()
-	adict={}
-	for _ in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	print(calculateHandlen(adict))
-		
+    """MainmFUnction"""
+    input_num = input()
+    adict = {}
+    for _ in range(int(input_num)):
+        data = input()
+        list_value = data.split()
+        adict[list_value[0]] = int(list_value[1])
+    print(hand_value(adict))
+        
 
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
