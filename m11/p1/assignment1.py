@@ -19,17 +19,17 @@ def get_word_score(input_word, word_length):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
-    SCRABBLE_LETTER_VALUES = {
-     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-     'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
+    letter_values = {
+    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
+    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
+    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
 
     word_score = 0
     for char in input_word:
-         word_score = word_score + SCRABBLE_LETTER_VALUES[char]
+        word_score = word_score + letter_values[char]
     if len(input_word) == word_length:
         return ((word_score)*len(input_word))+50
-    return ((word_score)*len(input_word))
+    return (word_score)*len(input_word)
 def main():
     '''
     Main function for the given problem
