@@ -3,7 +3,7 @@ Exercise: Assignment-1
 The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
 '''
 
-def get_word_score(word, n):
+def get_word_score(input_word, word_length):
     """
     Returns the score for a word. Assumes the word is a valid word.
 
@@ -20,16 +20,16 @@ def get_word_score(word, n):
     """
     # TO DO ... <-- Remove this comment when you code this function
     SCRABBLE_LETTER_VALUES = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
+     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
+     'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
+     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
 
     word_score = 0
-    for char in word:
+    for char in input_word:
          word_score = word_score + SCRABBLE_LETTER_VALUES[char]
-    if len(word) == n:
-    	return word_score+50
-    return word_score
+    if len(input_word) == n:
+        return ((word_score)*len(input_word))+50
+    return ((word_score)*len(input_word))
 def main():
     '''
     Main function for the given problem
