@@ -2,7 +2,7 @@
 '''
 	Assignment-1 Create Social Network
 '''
-"""
+
 
 #def create_social_network(data):
 	'''
@@ -35,7 +35,7 @@
 	'''
 
 	# remove the pass below and start writing your code
-#    return data
+#    return data"""
 
 def main():
 	'''
