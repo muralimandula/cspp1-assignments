@@ -32,7 +32,7 @@ def unfollow(network, arg1, arg2):
   #      del network[arg1].values(arg2)
     if arg1 in network:
         network[arg1].remove(arg2)
-    return network 
+    return network
 def delete_person(network, arg1):
     '''
         2 arguments are passed to this function
@@ -45,8 +45,7 @@ def delete_person(network, arg1):
     '''
     # remove the pass below and start writing your code
     if arg1 in network:
-        del network[arg1]
-        
+        del network[arg1]       
     return network
 def main():
     '''
