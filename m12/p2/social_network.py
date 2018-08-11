@@ -26,7 +26,11 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+ #   if arg1 in network:
+  #      del network[arg1].values(arg2)
+    
+
+    return network 
 
 def delete_person(network, arg1):
     '''
@@ -39,7 +43,9 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    del network[arg1]
+    if arg1 in network:
+        del network[arg1]
+
     return network
 
 
@@ -49,7 +55,7 @@ def main():
     '''
     network = eval(input())
     no_of_commands = int(input())
-    for i in range(no_of_commands):
+    for _ in range(int(no_of_commands)):
         command = input()
         command_split = command.split(" ")
         if command_split[0] == "follow":
