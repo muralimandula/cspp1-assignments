@@ -43,7 +43,7 @@ def main():
     '''
     input_lines = input()
     adict = {}
-    for i in range(int(input_lines)):
+    for _ in range(int(input_lines)):
         data = input()
         if 'follows' in data:
             list_value = data.split(" follows ")
@@ -51,7 +51,7 @@ def main():
                 adict[list_value[0]] = list_value[1].split(',')
             else:
     #          adict[list_value[0]] = list_value[1].append(list_value[1].split(','))
-               adict[list_value[0]].extend(list_value[1].split(','))
+                adict[list_value[0]].extend(list_value[1].split(','))
         # print(create_social_network(adict))
         else:
             break
