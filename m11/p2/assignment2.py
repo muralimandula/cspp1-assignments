@@ -31,8 +31,8 @@ def main():
     hand_dictionary = {}
     for i in range(int(length_of_list)):
         data = input()
-        l = data.split()
-        hand_dictionary[l[0]] = int(l[1])
+        list_in_hand = data.split()
+        hand_dictionary[list_in_hand[0]] = int(list_in_hand[1])
     word_data = input()
     updateHand(hand_dictionary,word_data)
         
