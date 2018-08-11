@@ -27,7 +27,7 @@ def get_word_score(input_word, word_length):
     word_score = 0
     for char in input_word:
          word_score = word_score + SCRABBLE_LETTER_VALUES[char]
-    if len(input_word) == n:
+    if len(input_word) == word_length:
         return ((word_score)*len(input_word))+50
     return ((word_score)*len(input_word))
 def main():
