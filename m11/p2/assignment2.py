@@ -21,10 +21,10 @@ def updateHand(hand_dictionary, word_data):
     returns: dictionary (string -> int)
     """
     # TO DO ... <-- Remove this comment when you code this function
-    for char in word:
-        if char in hand:
-            hand[char] = hand[char]-1
-    print(hand)
+    for char in word_data:
+        if char in hand_dictionary:
+            hand_dictionary[char] = hand_dictionary[char]-1
+    print(hand_dictionary)
 
 def main():
 	n=input()
