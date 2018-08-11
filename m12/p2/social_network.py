@@ -39,25 +39,25 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    return network.delete(str(arg1))
+    del network[arg1]
+    return network
 
 
 def main():
     '''
-        handling testcase input and printing output
+        handling testcase input and printing command
     '''
     network = eval(input())
-    lines = int(input())
-    for i in range(lines):
-        i += 1
-        line = input()
-        output = line.split(" ")
-        if output[0] == "follow":
-            network = follow(network, output[1], output[2])
-        elif output[0] == "unfollow":
-            network = unfollow(network, output[1], output[2])
-        elif output[0] == "delete":
-            network = delete_person(network, output[1])
+    no_of_commands = int(input())
+    for i in range(no_of_commands):
+        command = input()
+        command_split = command.split(" ")
+        if command_split[0] == "follow":
+            network = follow(network, command_split[1], command_split[2])
+        elif command_split[0] == "unfollow":
+            network = unfollow(network, command_split[1], command_split[2])
+        elif command_split[0] == "delete":
+            network = delete_person(network, command_split[1])
 
     print(network)
 
