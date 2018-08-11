@@ -2,7 +2,8 @@
 '''
 At this point, we have written code to generate a random hand and display that hand to the user.
 We can also ask the user for a word (Python's input) and score the word (using your getWordScore).
-However, at this point we have not written any code to verify that a word given by a player obeys the rules of the game.
+However, at this point we have not written any code to verify
+that a word given by a player obeys the rules of the game.
 A valid word is in the word list; and it is composed entirely of letters from the current hand.
 Implement the isValidWord function.
 
