@@ -51,7 +51,7 @@ def main():
             adict[list_value[0]] = list_value[1].split(',')
         else:
 #          adict[list_value[0]] = list_value[1].append(list_value[1].split(','))
-           adict[list_value[0]].append(list_value[1].split(','))
+           adict[list_value[0]].extend(list_value[1].split(','))
     # print(create_social_network(adict))
     print(adict)
 
