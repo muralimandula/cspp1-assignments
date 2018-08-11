@@ -46,7 +46,7 @@ def main():
     adict = {}
     for i in range(int(input_lines)):
         data = input()
-        list_value = data.split()
+        list_value = data.split(" follows ")
         if list_value[0] not in adict:
             adict[list_value[0]] = list_value[1].split(',')
         else:
