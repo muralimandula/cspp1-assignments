@@ -1,5 +1,8 @@
-#Exercise: Assignment-4
-#We are now ready to begin writing the code that interacts with the player. We'll be implementing the playHand function. This function allows the user to play out a single hand. First, though, you'll need to implement the helper calculateHandlen function, which can be done in under five lines of code.
+"""#Exercise: Assignment-4
+#We are now ready to begin writing the code that interacts with the player.
+We'll be implementing the playHand function. This function allows the user to play out a single hand.
+First, though, you'll need to implement the helper calculateHandlen function,
+which can be done in under five lines of code."""
 
 
 def hand_value(hand_list):
@@ -13,7 +16,7 @@ def hand_value(hand_list):
     sum_val = 0
     for key_dict in hand_list:
         sum_val += hand_list[key_dict]
-    return sum_val    
+    return sum_val
 
 def main():
     """MainmFUnction"""
@@ -24,7 +27,6 @@ def main():
         list_value = data.split()
         adict[list_value[0]] = int(list_value[1])
     print(hand_value(adict))
-        
 
 
 if __name__ == "__main__":
