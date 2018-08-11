@@ -27,16 +27,16 @@ def updateHand(hand_dictionary, word_data):
     print(hand_dictionary)
 
 def main():
-	n=input()
-	hand_dictionary={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		hand_dictionary[l[0]]=int(l[1])
-	word_data=input()
-	updateHand(hand_dictionary,word_data)
-		
+    length_of_list = input()
+    hand_dictionary = {}
+    for i in range(int(length_of_list)):
+        data = input()
+        l = data.split()
+        hand_dictionary[l[0]] = int(l[1])
+    word_data = input()
+    updateHand(hand_dictionary,word_data)
+        
 
 
 if __name__== "__main__":
-	main()
+    main()
