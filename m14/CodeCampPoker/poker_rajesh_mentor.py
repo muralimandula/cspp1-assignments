@@ -31,7 +31,8 @@ def is_straight(hand):
 """
     card_value_praveen = ['--23456789TJQKA'.index(c) for c, s in hand]
     card_value_praveen = set(card_value_praveen)
-    return len(card_value_praveen) == len(hand) and (max(card_value_praveen)-min(card_value_praveen) == 4)
+    return len(card_value_praveen) == len(hand) and 
+    (max(card_value_praveen)-min(card_value_praveen) == 4)
 
 def is_flush(hand):
     '''
@@ -78,15 +79,12 @@ def hand_rank(hand):
     # What would be the logic to determine if a hand is a straight or flush?
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flush
-
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    return 1
-
 def poker(hands):
     '''
     This function is completed for you. Read it to learn the code.
