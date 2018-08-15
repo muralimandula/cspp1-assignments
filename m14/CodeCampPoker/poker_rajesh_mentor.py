@@ -31,8 +31,7 @@ def is_straight(hand):
 """
     card_value_praveen = set(['--23456789TJQKA'.index(c) for c, s in hand])
     # card_value_praveen = set(card_value_praveen)
-    return len(card_value_praveen) == len(hand) and 
-    (max(card_value_praveen)-min(card_value_praveen) == 4)
+    return len(card_value_praveen) == len(hand) and (max(card_value_praveen)-min(card_value_praveen) == 4)
 
 def is_flush(hand):
     '''
