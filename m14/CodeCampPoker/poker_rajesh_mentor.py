@@ -5,7 +5,7 @@
 '''
 
 def is_straight(hand):
-    '''
+    """'''
         How do we find out if the given hand is a straight?
         The hand has a list of cards represented as strings.
         There are multiple ways of checking if the hand is a straight.
@@ -14,10 +14,8 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     praveen 2 is below'''
-    card_value_praveen = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_value_praveen) == len(hand) and (max(card_value_praveen)-min(card_value_praveen) == 4)
-    # if A in join()
-"""  praven1 is below
+        # if A in join()
+    praven1 is below
     hand_cards = []
     for c, s in hand:
         hand_cards.append(c)
@@ -31,6 +29,10 @@ def is_straight(hand):
 
     hand_cards_values
 """
+    card_value_praveen = ['--23456789TJQKA'.index(c) for c, s in hand]
+    card_value_praveen = set(card_value_praveen)
+    return len(card_value_praveen) == len(hand) and (max(card_value_praveen)-min(card_value_praveen) == 4)
+
 def is_flush(hand):
     '''
     How do we find out if the given hand is a flush?
@@ -39,19 +41,18 @@ def is_flush(hand):
     The second character is good enough to determine a flush
     Think of an algorithm: given the card suite how to check if it is a flush
     Write the code for it and return True if it is a flush else return False
+        """ I did
+    for i in range(len(hand)-1):
+        if hand[i][1] != hand[i+1][0]
+            return False
+    return True
+    """
     '''
     suit_set = set()
     for each_card in hand:
         suit_set.add(each_card[1])
 
     return len(suit_set) == 1
-    """ I did
-    for i in range(len(hand)-1):
-        if hand[i][1] != hand[i+1][0]
-            return False
-    return True
-    """
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -64,9 +65,9 @@ def hand_rank(hand):
     straight = is_straight(hand)
     if flush and straight is True:
         return 3
-    elif flush is True:
+    if flush is True:
         return 2
-    elif straight is True:
+    if straight is True:
         return 1
     return 0
     # By now you should have seen the way a card is represented.
