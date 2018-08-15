@@ -15,7 +15,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     praveen 2 is below'''
     
-    card_value_praveen = set(['--23456789TJQK'.index(c) for c,s in hand])
+    card_value_praveen = set(['--23456789TJQKA'.index(c) for c,s in hand])
     return len(card_value_praveen) == len(hand) and (max(card_value_praveen)-min(card_value_praveen)==4)
     # if A in join()
 """  praven1 is below
