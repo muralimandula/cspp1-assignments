@@ -29,8 +29,8 @@ def is_straight(hand):
 
     hand_cards_values
 """
-    card_value_praveen = ['--23456789TJQKA'.index(c) for c, s in hand]
-    card_value_praveen = set(card_value_praveen)
+    card_value_praveen = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    # card_value_praveen = set(card_value_praveen)
     return len(card_value_praveen) == len(hand) and 
     (max(card_value_praveen)-min(card_value_praveen) == 4)
 
