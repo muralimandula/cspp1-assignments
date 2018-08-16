@@ -81,41 +81,43 @@ def of_a_kind(hand):
 
     if 5 in pair_hand:                       #0 five of a kind
         # print("five of a kind")
-        return 0
+        return_value = 0
 
     flush = is_flush(hand)
     straight = is_straight(hand)
     if flush and straight is True:           #1 straight flush
         # print(" straight flush")
-        return 1
+        return_value = 1
 
     if 4 in pair_hand:                       #2 four of a kind
         # print("four of a kind")
-        return 2
+        return_value = 2
     if 3 in pair_hand and 2 in pair_hand:    #3 full house
         # print("full house")
-        return 3
+        return_value = 3
 
     if flush is True:                        #4 flush
         # print("flush")
-        return 4
+        return_value = 4
 
     if straight is True:                     #5 straight
-        # print("Straight")                    
-        return 5
+        # print("Straight")
+        return_value = 5
 
     if 3 in pair_hand and 1 in pair_hand:    #6 three of a kind
         # print("three of a kind")
-        return 6
+        return_value = 6
     if pair_hand.count(2) == 2:              #7 two pairs
         # print("two pairs")
-        return 7
+        return_value = 7
     if 2 in pair_hand and pair_hand.count(1) == 3:  #8 only one pair
         # print("one pair of a kind")
-        return 8
+        return_value = 8
 
     # print("High card")                       #9 High card
-    return 9
+    return_value = 9
+
+    return return_value
 
 
 
