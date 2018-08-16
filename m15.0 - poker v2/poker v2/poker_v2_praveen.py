@@ -78,6 +78,9 @@ def of_a_kind(hand):
     # print("\n")
     # print(hand, "76")
     # print(pair_hand)
+    hand_rank(hand, pair_hand)
+
+def hand_rank(hand, pair_hand)
 
     if 5 in pair_hand:                       #0 five of a kind
         # print("five of a kind")
