@@ -89,15 +89,15 @@ def of_a_kind(hand):
         # print(" straight flush")
         return 1
 
-    elif 4 in pair_hand:                       #2 four of a kind
+    if 4 in pair_hand:                       #2 four of a kind
         # print("four of a kind")
         return 2
 
-    elif 3 in pair_hand and 2 in pair_hand:    #3 full house
+    if 3 in pair_hand and 2 in pair_hand:    #3 full house
         # print("full house")
         return 3
 
-    elif flush is True:                        #4 flush
+    if flush is True:                        #4 flush
         # print("flush")
         return_value = 4
 
