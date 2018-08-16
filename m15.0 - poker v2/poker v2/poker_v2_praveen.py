@@ -77,15 +77,15 @@ def of_a_kind(hand):
 
     if 5 in pair_hand:
         return 0
-    if 4, 1 in pair_hand:    #four of a kind
+    if 4 and 1 in pair_hand:    #four of a kind
         return 2
-    if 3, 2 in pair_hand:    # full house
+    if 3 and 2 in pair_hand:    # full house
         return 3
-    if 3, 1 in pair_hand:    # three of a kind
+    if 3 and 1 in pair_hand:    # three of a kind
         return 6
     if pair_hand.count(2) == 4:  #tw0 pairs
         return 7
-    if 2, 1, 1 in pair_hand:  # only one pair
+    if 2 in pair_hand and pair_hand.count(1) == 3:  # only one pair
         return 8
     return 9
 
