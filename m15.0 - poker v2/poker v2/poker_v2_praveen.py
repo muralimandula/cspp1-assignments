@@ -80,25 +80,42 @@ def of_a_kind(hand):
     print(hand, "76")
     print(pair_hand)
 
-    if 5 in pair_hand:
+    if 5 in pair_hand:                       #0 five of a kind
         print("five of a kind")
         return 0
-    if 4 in pair_hand:    #four of a kind
+
+    flush = is_flush(hand)
+    straight = is_straight(hand)
+    if flush and straight is True:           #1 straight flush
+        print(" straight flush")
+        return 1
+
+    if 4 in pair_hand:                       #2 four of a kind
         print("four of a kind")
         return 2
-    if 3 in pair_hand and 2 in pair_hand:    # full house
+    if 3 in pair_hand and 2 in pair_hand:    #3 full house
         print("full house")
         return 3
-    if 3 in pair_hand and 1 in pair_hand:    # three of a kind
+
+    if flush is True:                        #4 flush
+        print("flush")
+        return 4
+
+    if straight is True:                     #5 straight
+        print("Straight")                    
+        return 5    
+
+    if 3 in pair_hand and 1 in pair_hand:    #6 three of a kind
         print("three of a kind")
         return 6
-    if pair_hand.count(2) == 4:  #tw0 pairs
+    if pair_hand.count(2) == 2:              #7 two pairs
         print("two pairs")
         return 7
-    if 2 in pair_hand and pair_hand.count(1) == 3:  # only one pair
+    if 2 in pair_hand and pair_hand.count(1) == 3:  #8 only one pair
         print("one pair of a kind")
         return 8
-    print("High card")
+
+    print("High card")                       #9 High card
     return 9
 
 
@@ -112,17 +129,17 @@ def hand_rank(hand):
     The first version should identify if the given hand is a straight
     or a flush or a straight flush.
     """
-    # a_kind = of_a_kind(hand)
-    flush = is_flush(hand)
-    straight = is_straight(hand)
-    if flush and straight is True:
-        return 1
-    if flush is True:
-        return 4
-    if straight is True:
-        return 5
-    return 6
-    # return a_kind
+    
+    # flush = is_flush(hand)
+    # straight = is_straight(hand)
+    a_kind = of_a_kind(hand)
+    # if flush and straight is True:
+    #     return 1
+    # if flush is True:
+    #     return 4
+    # if straight is True:
+    #     return 5
+    return a_kind
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
