@@ -56,11 +56,10 @@ def is_flush(hand):
     return len(suit_set) == 1
 
 def of_a_kind(hand):
-
-    max_kind = 1
+    """ of a kind for hand """
+    # max_kind = 1
     pair_hand = []
     counted = []
-    
     card_value_kind = ['--23456789TJQKA'.index(c) for c, s in hand]
     length = len(card_value_kind)
     # print("\n", card_value_kind)
@@ -103,7 +102,7 @@ def of_a_kind(hand):
 
     if straight is True:                     #5 straight
         # print("Straight")                    
-        return 5    
+        return 5
 
     if 3 in pair_hand and 1 in pair_hand:    #6 three of a kind
         # print("three of a kind")
@@ -129,7 +128,7 @@ def hand_rank(hand):
     The first version should identify if the given hand is a straight
     or a flush or a straight flush.
     """
-    
+
     # flush = is_flush(hand)
     # straight = is_straight(hand)
     a_kind = of_a_kind(hand)
