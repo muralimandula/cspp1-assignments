@@ -81,6 +81,7 @@ def of_a_kind(hand):
     return check_rank(hand, pair_hand)
 
 def check_rank(hand, pair_hand):
+    """ check rank """
 
     if 5 in pair_hand:                       #0 five of a kind
         # print("five of a kind")
