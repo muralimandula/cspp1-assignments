@@ -59,9 +59,10 @@ def of_a_kind(hand):
 
     max_kind = 0
     pair_hand = []
-    length = len(card_value_kind)
+    
     card_value_kind = ['--23456789TJQKA'.index(c) for c, s in hand]
-   
+    length = len(card_value_kind)
+    print(card_value_kind)
     for i in range(length-1):
         hand_kind_count = 0
         for j in range(1, len(length)):
