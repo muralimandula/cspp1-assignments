@@ -113,8 +113,9 @@ def of_a_kind(hand):
     elif 2 in pair_hand and pair_hand.count(1) == 3:  #8 only one pair
         # print("one pair of a kind")
         return_value = 8
-
+    
     # print("High card")                       #9 High card
+    else:
     return_value = 9
 
     return return_value
