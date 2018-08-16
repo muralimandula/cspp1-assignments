@@ -63,7 +63,7 @@ def of_a_kind(hand):
     
     card_value_kind = ['--23456789TJQKA'.index(c) for c, s in hand]
     length = len(card_value_kind)
-    print("\n", card_value_kind)
+    # print("\n", card_value_kind)
     for i in range(length):
         hand_kind_count = 0
         if card_value_kind[i] not in counted:
@@ -77,45 +77,45 @@ def of_a_kind(hand):
             # pair_hand.append(hand_kind_count)
             counted.append(card_value_kind[i])
     # print("\n")
-    print(hand, "76")
-    print(pair_hand)
+    # print(hand, "76")
+    # print(pair_hand)
 
     if 5 in pair_hand:                       #0 five of a kind
-        print("five of a kind")
+        # print("five of a kind")
         return 0
 
     flush = is_flush(hand)
     straight = is_straight(hand)
     if flush and straight is True:           #1 straight flush
-        print(" straight flush")
+        # print(" straight flush")
         return 1
 
     if 4 in pair_hand:                       #2 four of a kind
-        print("four of a kind")
+        # print("four of a kind")
         return 2
     if 3 in pair_hand and 2 in pair_hand:    #3 full house
-        print("full house")
+        # print("full house")
         return 3
 
     if flush is True:                        #4 flush
-        print("flush")
+        # print("flush")
         return 4
 
     if straight is True:                     #5 straight
-        print("Straight")                    
+        # print("Straight")                    
         return 5    
 
     if 3 in pair_hand and 1 in pair_hand:    #6 three of a kind
-        print("three of a kind")
+        # print("three of a kind")
         return 6
     if pair_hand.count(2) == 2:              #7 two pairs
-        print("two pairs")
+        # print("two pairs")
         return 7
     if 2 in pair_hand and pair_hand.count(1) == 3:  #8 only one pair
-        print("one pair of a kind")
+        # print("one pair of a kind")
         return 8
 
-    print("High card")                       #9 High card
+    # print("High card")                       #9 High card
     return 9
 
 
