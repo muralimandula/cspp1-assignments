@@ -29,7 +29,7 @@ def is_straight(hand):
 
     hand_cards_values
 """
-    card_value_praveen = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    card_value_praveen = set('--23456789TJQKA'.index(c) for c, s in hand)
     short = card_value_praveen
     # card_value_praveen = set(card_value_praveen)
     return len(short) == len(hand) and (max(short)-min(short) == 4)
@@ -54,23 +54,63 @@ def is_flush(hand):
         suit_set.add(each_card[1])
 
     return len(suit_set) == 1
+
+def of_a_kind(hand):
+
+    max_kind = 0
+    pair_hand = []
+    length = len(card_value_kind)
+    card_value_kind = ['--23456789TJQKA'.index(c) for c, s in hand]
+   
+    for i in range(length-1):
+        hand_kind_count = 0
+        for j in range(1, len(length)):
+            if card_value_kind[i] == card_value_kind[j]:
+                hand_kind_count += 1
+
+        if hand_kind_count >= max_kind:
+            max_kind = hand_kind_count
+            pair_hand.append(max_kind)
+        pair_hand.append(hand_kind_count)
+
+    print(pair_hand)
+
+    if 5 in pair_hand:
+        return 0
+    if 4, 1 in pair_hand:    #four of a kind
+        return 2
+    if 3, 2 in pair_hand:    # full house
+        return 3
+    if 3, 1 in pair_hand:    # three of a kind
+        return 6
+    if pair_hand.count(2) == 4:  #tw0 pairs
+        return 7
+    if 2, 1, 1 in pair_hand:  # only one pair
+        return 8
+    return 9
+
+
+
+
 def hand_rank(hand):
-    '''
-        You will code this function. The goal of the function is to
-        return a value that max can use to identify the best hand.
-        As this function is complex we will progressively develop it.
-        The first version should identify if the given hand is a straight
-        or a flush or a straight flush.
-    '''
+    """
+    You will code this function. The goal of the function is to
+    return a value that max can use to identify the best hand.
+    As this function is complex we will progressively develop it.
+    The first version should identify if the given hand is a straight
+    or a flush or a straight flush.
+    """
+    a_kind = of_a_kind(hand)
     flush = is_flush(hand)
     straight = is_straight(hand)
     if flush and straight is True:
-        return 3
-    if flush is True:
-        return 2
-    if straight is True:
         return 1
-    return 0
+    if flush is True:
+        return 4
+    if straight is True:
+        return 5
+    return a_kind
+
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
     # Each card is coded as a 2 character string. Example King of Hearts is KH
@@ -103,7 +143,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    return min(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
