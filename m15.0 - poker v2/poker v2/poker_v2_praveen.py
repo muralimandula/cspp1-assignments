@@ -78,9 +78,9 @@ def of_a_kind(hand):
     # print("\n")
     # print(hand, "76")
     # print(pair_hand)
-    return hand_rank(hand, pair_hand)
+    return hand_rank(card_value_kind, pair_hand)
 
-def hand_rank(hand, pair_hand):
+def hand_rank(card_value_kind, pair_hand):
 
     if 5 in pair_hand:                       #0 five of a kind
         # print("five of a kind")
