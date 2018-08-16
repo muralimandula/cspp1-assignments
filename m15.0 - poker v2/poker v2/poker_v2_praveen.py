@@ -78,7 +78,7 @@ def of_a_kind(hand):
     # print("\n")
     # print(hand, "76")
     # print(pair_hand)
-    hand_rank(hand, pair_hand)
+    return hand_rank(hand, pair_hand)
 
 def hand_rank(hand, pair_hand):
 
