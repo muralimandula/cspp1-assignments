@@ -85,7 +85,7 @@ def of_a_kind(hand):
 
     flush = is_flush(hand)
     straight = is_straight(hand)
-    elif flush and straight is True:           #1 straight flush
+    if flush and straight is True:           #1 straight flush
         # print(" straight flush")
         return_value = 1
 
@@ -116,7 +116,7 @@ def of_a_kind(hand):
     
     # print("High card")                       #9 High card
     else:
-    return_value = 9
+        return_value = 9
 
     return return_value
 
