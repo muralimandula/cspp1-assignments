@@ -56,7 +56,6 @@ def kind(hand, n_len):
 def hand_rank(hand):
     ''' ranks the card '''
     hand_ranks = card_value_hand(hand)
-    print(hand_ranks)
     rank = (0, hand_ranks)
     if is_flush(hand) and is_straight(hand):       # straight flush
         rank = (8,)
