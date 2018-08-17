@@ -17,7 +17,8 @@ def card_value_hand(hand):
 
 def is_straight(hand):
     ''' Straight hand function '''
-    return len(card_value_hand(hand)) == 5 and (max(card_value_hand(hand))-min(card_value_hand(hand)) == 4)
+    return len(card_value_hand(hand)) == 5 and (max(card_value_hand(
+        hand))-min(card_value_hand(hand)) == 4)
 
 def is_flush(hand):
     ''' flush hand function '''
@@ -62,7 +63,7 @@ def hand_rank(hand):
 
     elif kind(hand, 4):                            # four of a kind
         rank = (7,)
-    
+
     elif kind(hand, 3) and kind(hand, 2):          # full house
         rank = (6, )
 
@@ -74,9 +75,9 @@ def hand_rank(hand):
 
     elif kind(hand, 3):                            # three of a kind
         return (3, kind(hand, 2), hand_ranks)
-    
-    elif kind(hand, 2) and kind(sorted(hand, reverse=True), 2) and kind(hand, 2
-    ) != kind(sorted(hand, reverse=True), 2):     # Two pair
+
+    elif kind(hand, 2) and kind(sorted(hand, reverse=True), 2) and kind(
+    hand, 2) != kind(sorted(hand, reverse=True), 2):     # Two pair
         return (2, kind(hand, 2), kind(sorted(hand, reverse=True), 2))
 
     elif kind(hand, 2):                            # one pair
