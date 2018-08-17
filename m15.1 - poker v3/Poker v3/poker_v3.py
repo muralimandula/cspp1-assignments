@@ -29,7 +29,7 @@ def is_straight(hand):
 
     hand_cards_values
 """
-    card_value_praveen = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    card_value_praveen = set('--23456789TJQKA'.index(c) for c, s in hand)
     short = card_value_praveen
     # card_value_praveen = set(card_value_praveen)
     return len(short) == len(hand) and (max(short)-min(short) == 4)
@@ -54,23 +54,103 @@ def is_flush(hand):
         suit_set.add(each_card[1])
 
     return len(suit_set) == 1
-def hand_rank(hand):
-    '''
-        You will code this function. The goal of the function is to
-        return a value that max can use to identify the best hand.
-        As this function is complex we will progressively develop it.
-        The first version should identify if the given hand is a straight
-        or a flush or a straight flush.
-    '''
+
+def of_a_kind(hand):
+    """ of a kind for hand """
+    # max_kind = 1
+    pair_hand = []
+    v3_pair_hand ={}
+    # counted = []
+    card_value_kind = ['--23456789TJQKA'.index(c) for c, s in hand]
+    length = len(card_value_kind)
+    print("\n", card_value_kind)
+    for i in range(length):
+        hand_kind_count = 0
+        # if card_value_kind[i] not in v3_pair_hand:
+        for j in range(length):
+            if card_value_kind[i] == card_value_kind[j]:
+                    hand_kind_count += 1
+
+            # if hand_kind_count >= max_kind:
+            #     max_kind = hand_kind_count
+        pair_hand.append(hand_kind_count)
+        v3_pair_hand[hand_kind_count] = card_value_kind[i]
+            # pair_hand.append(hand_kind_count)
+        # counted.append(card_value_kind[i])
+    # print("\n")
+    # print(hand, "76")
+    # print(pair_hand)
+    print(pair_hand)
+    print(v3_pair_hand)
+    return check_rank(hand, pair_hand, v3_pair_hand)
+
+def check_rank(hand, pair_hand, v3_pair_hand):
+    """ check rank """
+
+    if 5 in pair_hand:                       #0 five of a kind
+        print("five of a kind")
+        return 0
+
     flush = is_flush(hand)
     straight = is_straight(hand)
-    if flush and straight is True:
-        return 3
-    if flush is True:
-        return 2
-    if straight is True:
+    if flush and straight is True:           #1 straight flush
+        print(" straight flush")
         return 1
-    return 0
+
+    if 4 in pair_hand:                       #2 four of a kind
+        print("four of a kind")
+        return 2
+
+    if 3 in pair_hand and 2 in pair_hand:    #3 full house
+        print("full house")
+        return 3
+
+    if flush is True:                        #4 flush
+        print("flush")
+        return_value = 4
+
+    elif straight is True:                     #5 straight
+        print("Straight")
+        return_value = 5
+
+    elif 3 in pair_hand and 1 in pair_hand:    #6 three of a kind
+        print("three of a kind")
+        return_value = 6
+    elif pair_hand.count(2) == 2:              #7 two pairs
+        print("two pairs")
+        return_value = 7
+    elif 2 in pair_hand and pair_hand.count(1) == 3:  #8 only one pair
+        print("one pair of a kind")
+        return_value = 8
+    else:                                            #9 High card
+        print("High card")  
+        return_value = 9
+
+    return return_value
+
+
+
+
+def hand_rank(hand):
+    """
+    You will code this function. The goal of the function is to
+    return a value that max can use to identify the best hand.
+    As this function is complex we will progressively develop it.
+    The first version should identify if the given hand is a straight
+    or a flush or a straight flush.
+    """
+
+    # flush = is_flush(hand)
+    # straight = is_straight(hand)
+    a_kind = of_a_kind(hand)
+    # if flush and straight is True:
+    #     return 1
+    # if flush is True:
+    #     return 4
+    # if straight is True:
+    #     return 5
+    return a_kind
+
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
     # Each card is coded as a 2 character string. Example King of Hearts is KH
@@ -103,7 +183,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    return min(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
