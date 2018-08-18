@@ -40,11 +40,11 @@
     
 
 # def process_queries(search_index, queries):
-    '''
+'''
         function to process the search queries
         iterate through all the queries and call the search function
         print the results returned by search function
-    '''
+'''
     
 
 def main():
