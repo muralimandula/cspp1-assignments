@@ -79,7 +79,7 @@ def build_search_index(cleaned_documents_list):
 """
 def tokenize(list_of_words_in_docs, index, search_engine_words):
     """
-    calculating the frequency
+    # calculating the frequency
     """
     stop_words = load_stopwords('stopwords.txt')             # loading words from the .txt file
     
