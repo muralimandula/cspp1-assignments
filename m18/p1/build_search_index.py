@@ -20,6 +20,7 @@
         .
     }
 '''
+import re
 
 def build_search_index(docs):
     '''
