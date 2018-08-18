@@ -44,7 +44,7 @@ def build_search_index(cleaned_documents_list):
 
     main_list = []
        
-    for i in range(len(cleaned_documents_list)-1)
+    for i in range(len(cleaned_documents_list)-1):
         main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
             
     for word in set(main_list) :
