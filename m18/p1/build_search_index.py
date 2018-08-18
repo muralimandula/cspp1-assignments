@@ -93,7 +93,7 @@ def word_list(documents_list):
         for j in range(len(documents_list[i])):
 
             # print(len(documents_list[i]), "91")
-            # print(j)
+             # print(j)
             documents_list[i] = [regex.sub('', word.lower().strip()) for word in documents_list[i]]
             # print(documents_list[i])
    
@@ -117,7 +117,7 @@ def main():
         i += 1
 
     # call print to display the search index
-    print(documents_list)
+    # print(documents_list)
     print_search_index(build_search_index(word_list(documents_list)))
 
 if __name__ == '__main__':
