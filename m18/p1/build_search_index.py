@@ -49,7 +49,7 @@ def build_search_index(cleaned_documents_list):
     main_list = set(main_list)
 
     for word in main_list:
-        if word in stopwords:
+        if word in stop_words:
             main_list.remove(word)
 
     
