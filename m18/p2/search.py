@@ -1,10 +1,11 @@
-# """
+"""Modukle"""
 #     Tiny Search Engine - Part 2 - Search
 #     In this programming assingment you are given the search index and search queries as input.
 #     Complete the program below to search in the index. Don't worry, it is explained below.
 #     A search index is a python dictionary.
 #     The keys of this dictionary are words contained in ALL the input text documents.
-#     The values are a list of documents such that the key/word appears in each document atleast once.
+#     The values are a list of documents such that the key/word 
+# appears in each document atleast once.
 #     The document in the list is represented as a tuple.
 #     The tuple has 2 items. The first item is the document ID.
 #     Document ID is represented by the list index.
