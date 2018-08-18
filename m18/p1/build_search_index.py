@@ -22,19 +22,19 @@
 '''
 import re
 
-def build_search_index(docs):
+def build_search_index(cleaned_documents_list):
     '''
-        Process the docs step by step as given below
+        Process the cleaned_document_list step by step as given below
     '''
 
     # initialize a search index (an empty dictionary)
     search_index = {}                                           
-    search_index = tokenize(docs, 0, {})
-    search_index = tokenize(docs, 1, search_index)
-    search_index = tokenize(docs, 2, search_index)
-    search_index = tokenize(docs, 3, search_index)
-    search_index = tokenize(docs, 4, search_index)
-    search_index = tokenize(docs, 5, search_index)
+    search_index = tokenize(cleaned_documents_list[0], 0, {})
+    search_index = tokenize(cleaned_documents_list[1], 1, search_index)
+    search_index = tokenize(cleaned_documents_list[2], 2, search_index)
+    search_index = tokenize(cleaned_documents_list[3], 3, search_index)
+    search_index = tokenize(cleaned_documents_list[4], 4, search_index)
+    search_index = tokenize(cleaned_documents_list[5], 5, search_index)
 
 
     return search_index    
@@ -77,15 +77,20 @@ def print_search_index(search_index):
         print(key, " - ", search_index[key])
 
 
-def word_list(document):
+def word_list(documents_list):
     '''
         Change case to lower and split the words using a SPACE
         Clean up the document by remvoing all the non alphabet characters
         return a list of words
     '''
-    regex = re.compile('[^a-z]')               # cap-'^' mean only, i.e., only a to z
-    return [regex.sub('', word.strip()) for word in document[0].lower().split(' ')]  
+    regex = re.compile('[^a-z]')              # cap-'^' mean only, i.e., only a to z
 
+    for i in range(len(documents_list))
+        documents_list[i] = regex.sub('', word.strip()) for word in documents_list[i].lower()
+         
+   
+    # return [regex.sub('', word.strip()) for word in document[0].lower().split(' ')]  
+    return documents_list
 
 # main function that loads the docs from files
 def main():
@@ -93,17 +98,18 @@ def main():
         main function
     '''
     # empty document list
-    documents = []
+    documents_list = []
     # iterate for n times
     lines = int(input())
-    # iterate through N times and add documents to the list
+    # iterate through N times and add documents_list to the list
     for i in range(lines):
-        documents.append(input().split())
+    	input_document = input()
+        documents_list.append(input_document.split())
         i += 1
 
     # call print to display the search index
-    print(documents)
-    print_search_index(build_search_index(word_list(documents)))
+    print(documents_list)
+    print_search_index(build_search_index(word_list(documents_list)))
 
 if __name__ == '__main__':
     main()
