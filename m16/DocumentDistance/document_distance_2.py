@@ -4,15 +4,15 @@
 import re
 import math
 
-def clean(input):
+def clean(input_value):
     '''
         Make a words list and clean up the words, eliminating all special characters and numbers
     '''
     regex = re.compile('[^a-z]')                          # cap-'^' mean only, i.e., only a to z
-    # print([regex.sub('', word.strip()) for word in input.lower().split(' ')])
-    return [regex.sub('', word.strip()) for word in input.lower().split(' ')]
+    # print([regex.sub('', word.strip()) for word in input_value.lower().split(' ')])
+    return [regex.sub('', word.strip()) for word in input_value.lower().split(' ')]
 
-def word_frequency(list_of_words, index, dictionary = {}):
+def word_frequency(list_of_words, index, dictionary):
     stop_words = load_stopwords('stopwords.txt')             # loading words from the .txt file
     for word in list_of_words:
         if word != "" and word not in stop_words:
