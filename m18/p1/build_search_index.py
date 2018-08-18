@@ -94,7 +94,7 @@ def word_list(documents_list):
 
             print(len(documents_list[i]), "91")
             print(j)
-            documents_list[i] = [regex.sub('', word.strip()) for word in documents_list[i].lower()]
+            documents_list[i] = [regex.sub('', word.lower().strip()) for word in documents_list[i]]
             print(documents_list[i])
    
     # return [regex.sub('', word.strip()) for word in document[0].lower().split(' ')]  
