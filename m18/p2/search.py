@@ -35,8 +35,8 @@
         split the query into lowercase words
         check if the word is in the search_index
         collect all the values for the words that are in the search_index
-        make a set of doc_id and return
- '''
+       make a set of doc_id and return
+'''
 
 
 # def process_queries(search_index, queries):
