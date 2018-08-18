@@ -40,14 +40,6 @@ def build_search_index(docs):
     return search_index    
 
 
-
-    # iterate through all the docs
-    # keep track of doc_id which is the list index corresponding the document
-    # hint: use enumerate to obtain the list index in the for loop
-
-        # clean up doc and tokenize to words list
-    
-
 def tokenize(list_of_words_in_docs, index, search_engine_words):
     """
     calculating the frequency
@@ -106,7 +98,7 @@ def main():
     lines = int(input())
     # iterate through N times and add documents to the list
     for i in range(lines):
-        documents.append(input())
+        documents.append(input().split())
         i += 1
 
     # call print to display the search index
