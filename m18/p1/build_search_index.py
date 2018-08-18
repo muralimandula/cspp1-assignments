@@ -92,7 +92,7 @@ def word_list(document):
         return a list of words
     '''
     regex = re.compile('[^a-z]')               # cap-'^' mean only, i.e., only a to z
-    return [regex.sub('', word.strip()) for word in document.lower().split(' ')]  
+    return [regex.sub('', word.strip()) for word in document[0].lower().split(' ')]  
 
 
 # main function that loads the docs from files
