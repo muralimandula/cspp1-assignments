@@ -13,6 +13,9 @@ def clean(input_value):
     return [regex.sub('', word.strip()) for word in input_value.lower().split(' ')]
 
 def word_frequency(list_of_words, index, dictionary):
+    """
+    calculating the frequency
+    """
     stop_words = load_stopwords('stopwords.txt')             # loading words from the .txt file
     for word in list_of_words:
         if word != "" and word not in stop_words:
@@ -22,6 +25,9 @@ def word_frequency(list_of_words, index, dictionary):
     return dictionary
 
 def computation(dictionary):
+    """
+    computing according to the scenario
+    """
     num = sum(value[0]*value[1] for value in dictionary.values())
     den1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
     den2 = math.sqrt(sum(value[1]**2 for value in dictionary.values()))
