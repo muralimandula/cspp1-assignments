@@ -76,7 +76,7 @@ def build_search_index(cleaned_documents_list):
 
 
     
-
+"""
 def tokenize(list_of_words_in_docs, index, search_engine_words):
     """
     calculating the frequency
@@ -92,7 +92,7 @@ def tokenize(list_of_words_in_docs, index, search_engine_words):
             search_engine_words[word][index] = search_engine_words[word][index]  1                        #### when already exists
     
     return search_engine_words                                     # return search engine of non stop words (Dictionary)
-
+"""
 
 
 def load_stopwords(filename):
