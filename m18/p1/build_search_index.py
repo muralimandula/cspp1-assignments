@@ -103,7 +103,7 @@ def main():
     lines = int(input())
     # iterate through N times and add documents_list to the list
     for i in range(lines):
-    	input_document = input()
+        input_document = input()
         documents_list.append(input_document.split())
         i += 1
 
