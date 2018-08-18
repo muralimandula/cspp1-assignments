@@ -86,7 +86,7 @@ def word_list(documents_list):
     regex = re.compile('[^a-z]')              # cap-'^' mean only, i.e., only a to z
 
     for i in range(len(documents_list)):
-        documents_list[i] = regex.sub('', word.strip()) for word in documents_list[i].lower()
+        documents_list[i] = [regex.sub('', word.strip()) for word in documents_list[i].lower()]
          
    
     # return [regex.sub('', word.strip()) for word in document[0].lower().split(' ')]  
