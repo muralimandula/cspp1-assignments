@@ -37,7 +37,7 @@
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
  '''
-    
+
 
 # def process_queries(search_index, queries):
 '''
@@ -45,7 +45,7 @@
         iterate through all the queries and call the search function
         print the results returned by search function
 '''
-    
+
 
 def main():
     '''
