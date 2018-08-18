@@ -1,4 +1,4 @@
-'''
+"""
     Tiny Search Engine - Part 2 - Search
     In this programming assingment you are given the search index and search queries as input.
     Complete the program below to search in the index. Don't worry, it is explained below.
@@ -27,24 +27,24 @@
     Return the search results.
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
-'''
+"""
 
 # def search(search_index, query):
-'''
+"""
         function to search through the search index and return the results
         split the query into lowercase words
         check if the word is in the search_index
         collect all the values for the words that are in the search_index
        make a set of doc_id and return
-'''
+"""
 
 
 # def process_queries(search_index, queries):
-'''
+"""
         function to process the search queries
         iterate through all the queries and call the search function
         print the results returned by search function
-'''
+"""
 
 
 def main():
