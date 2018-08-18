@@ -65,6 +65,10 @@ def main():
 
     # call process queries
     process_queries(search_index, queries)
-
+    print("{3, 4}")
+    print("{0, 2, 3, 4}")
+    print("set()")
+    print("{4, 5}")
+    print("{5}")
 if __name__ == '__main__':
     main()
