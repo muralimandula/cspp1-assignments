@@ -32,12 +32,12 @@ def similarity(input1, input2):
     '''
         Compute the document distance as given in the PDF
     '''
-    input1 = clean(input1)
-    input2 = clean(input2)
+    input1_list = clean(input1)
+    input2_list = clean(input2)
 
     dictionary = {}
-    dictionary = word_frequency(input1, 0, {})
-    dictionary = word_frequency(input2, 1, dictionary)
+    dictionary = word_frequency(input1_list, 0, {})
+    dictionary = word_frequency(input2_list, 1, dictionary)
 
     return computation(dictionary)
 
