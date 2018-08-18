@@ -28,17 +28,54 @@ def build_search_index(cleaned_documents_list):
     '''
 
     # initialize a search index (an empty dictionary)
-    search_index = {}                                           
-    search_index = tokenize(cleaned_documents_list[0], 0, {})
-    search_index = tokenize(cleaned_documents_list[1], 1, search_index)
-    search_index = tokenize(cleaned_documents_list[2], 2, search_index)
-    search_index = tokenize(cleaned_documents_list[3], 3, search_index)
-    search_index = tokenize(cleaned_documents_list[4], 4, search_index)
-    search_index = tokenize(cleaned_documents_list[5], 5, search_index)
+    # search_index = {}                                           
+    # search_index = tokenize(cleaned_documents_list[0], 0, {})
+    # search_index = tokenize(cleaned_documents_list[1], 1, search_index)
+    # search_index = tokenize(cleaned_documents_list[2], 2, search_index)
+    # search_index = tokenize(cleaned_documents_list[3], 3, search_index)
+    # search_index = tokenize(cleaned_documents_list[4], 4, search_index)
+    # search_index = tokenize(cleaned_documents_list[5], 5, search_index)
 
 
-    return search_index    
+    # return search_index    
+    search_engine_words = {}
+    
+    stop_words = load_stopwords('stopwords.txt')
 
+    main_list = []
+       
+    for i in range(len(cleaned_documents_list)-1)
+        main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
+            
+    for word in set(main_list) :
+
+            count0 = cleaned_documents_list[0].count(word)
+
+            count1 = cleaned_documents_list[1].count(word)
+
+            count2 = cleaned_documents_list[2].count(word)
+
+            count3 = cleaned_documents_list[3].count(word)
+
+            count4 = cleaned_documents_list[4].count(word)
+
+            count5 = cleaned_documents_list[5].count(word)
+
+            search_engine_words[word]=((0, count0),(1, count1), (2, count2), (3, count3), (4, count4), (5, count5))
+
+
+    return search_engine_words
+
+
+
+
+        # if word != "" and word not in stop_words:            # only, if not a stop word
+        #         if word not in search_engine_words:
+
+
+
+
+    
 
 def tokenize(list_of_words_in_docs, index, search_engine_words):
     """
@@ -48,9 +85,11 @@ def tokenize(list_of_words_in_docs, index, search_engine_words):
     
     for word in list_of_words_in_docs:
         if word != "" and word not in stop_words:            # only, if not a stop word
-            if word not in search_engine_words:                    # adding non stop words into search engine
+            if word not in search_engine_words:   
+                
+                             # adding non stop words into search engine
                 search_engine_words[word] = [0, 0]                       #### when not exist
-            search_engine_words[word][index] += 1                        #### when already exists
+            search_engine_words[word][index] = search_engine_words[word][index]  1                        #### when already exists
     
     return search_engine_words                                     # return search engine of non stop words (Dictionary)
 
@@ -90,7 +129,7 @@ def word_list(documents_list):
         # print(len(documents_list), "89")
         # print(i)
 
-        for j in range(len(documents_list[i])):
+        for _ in range(len(documents_list[i])):
 
             # print(len(documents_list[i]), "91")
              # print(j)
