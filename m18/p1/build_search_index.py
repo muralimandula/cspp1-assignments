@@ -46,8 +46,15 @@ def build_search_index(cleaned_documents_list):
        
     for i in range(len(cleaned_documents_list)-1):
         main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
-            
-    for word in set(main_list) :
+    main_list = set(main_list)
+
+    for word in main_list:
+        if word in stopwords:
+            main_list.remove(word)
+
+    
+
+    for word in main_list :
 
             count0 = cleaned_documents_list[0].count(word)
 
