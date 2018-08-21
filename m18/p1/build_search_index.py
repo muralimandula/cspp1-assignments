@@ -47,13 +47,6 @@ def build_search_index(cleaned_documents_list):
         count5 = cleaned_documents_list[5].count(word)
         search_engine_words[word] = [(0, count0), (1, count1), (2, count2), (3, count3), (4, count4), (5, count5)]
 
-
-    # print(search_engine_words)
-
-    # for key in search_engine_words:
-    #     print(key)
-    #     for i in range(6):
-    #         if search_engine_words[key][i][1] == 0:
     return search_engine_words
 
 
@@ -75,7 +68,9 @@ def print_search_index(search_index):
     '''
     keys = sorted(search_index.keys())
     for key in keys:
-        print(key, " - ", search_index[key])
+        for i in range(6):
+            if key[i][1] == 0
+                print(key, " - ", search_index[key])
 
 
 def word_list(documents_list):
