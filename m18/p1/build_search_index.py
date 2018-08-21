@@ -38,7 +38,7 @@ def build_search_index(cleaned_documents_list):
             re_main_list.append(word)
     # print(main_list)
 
-    for word in set(re_main_list) :     # main list is the list of cleaned, unique words in lower case
+    for word in set(re_main_list):   # main list is the list of cleaned,unique words in lower case
         count0 = cleaned_documents_list[0].count(word)
         count1 = cleaned_documents_list[1].count(word)
         count2 = cleaned_documents_list[2].count(word)
@@ -69,9 +69,9 @@ def print_search_index(search_index):
     keys = sorted(search_index.keys())
     # print(search_index)
     for key in keys:
-    #     for i in range(6):
-    #         if keys[key][i][1] == 0:
-         print(key, " - ", search_index[key])
+        for i in range(6):
+            if keys[key][i][1] == 0:
+                print(key, " - ", search_index[key])
 
 
 def word_list(documents_list):
