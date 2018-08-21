@@ -26,35 +26,17 @@ def build_search_index(cleaned_documents_list):
     '''
         Process the cleaned_document_list step by step as given below
     '''
-
-    # initialize a search index (an empty dictionary)
-    # search_index = {}                                           
-    # search_index = tokenize(cleaned_documents_list[0], 0, {})
-    # search_index = tokenize(cleaned_documents_list[1], 1, search_index)
-    # search_index = tokenize(cleaned_documents_list[2], 2, search_index)
-    # search_index = tokenize(cleaned_documents_list[3], 3, search_index)
-    # search_index = tokenize(cleaned_documents_list[4], 4, search_index)
-    # search_index = tokenize(cleaned_documents_list[5], 5, search_index)
-
-
-    # return search_index    
     search_engine_words = {}
-    
     stop_words = load_stopwords('stopwords.txt')
-
     main_list = []
-       
     for i in range(len(cleaned_documents_list)-1):
-        main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
-    main_list = set(main_list)
-
+    main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
+    main_list = set(main_list)                                                 # unique words
     for word in main_list:
         if word in stop_words:
             main_list.remove(word)
 
-     
-
-    for word in main_list :
+    for word in main_list :     # main list is the list of cleaned, unique words in lower case
 
             count0 = cleaned_documents_list[0].count(word)
 
@@ -70,7 +52,9 @@ def build_search_index(cleaned_documents_list):
 
             search_engine_words[word]=((0, count0),(1, count1), (2, count2), (3, count3), (4, count4), (5, count5))
 
-
+    
+    print(search_engine_words)
+    # return search_index    
     return search_engine_words
 
 
