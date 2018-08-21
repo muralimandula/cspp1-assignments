@@ -31,13 +31,13 @@ def build_search_index(cleaned_documents_list):
     main_list = []
     for i in range(len(cleaned_documents_list)-1):
         main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
-    # main_list = set(main_list)                                                # unique words
-    for word in stop_words:
-        if word in main_list:
+    main_list = set(main_list)                                                # unique words
+    for word in main_list:
+        if word in stop_words:
             main_list.remove(word)
     # print(main_list)
 
-    for word in set(main_list) :     # main list is the list of cleaned, unique words in lower case
+    for word in main_list:     # main list is the list of cleaned, unique words in lower case
         count0 = cleaned_documents_list[0].count(word)
         count1 = cleaned_documents_list[1].count(word)
         count2 = cleaned_documents_list[2].count(word)
