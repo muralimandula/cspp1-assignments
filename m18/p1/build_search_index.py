@@ -70,7 +70,7 @@ def print_search_index(search_index):
     # print(search_index)
     for key in keys:
         for i in range(6):
-            if keys[key][i][1] != 0:
+            if search_index[key][i][1] != 0:
                 print(key, " - ", search_index[key])
     # for key in search_index:
     #     while (0,0) in search_index[key]:
