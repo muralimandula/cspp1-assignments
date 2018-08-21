@@ -67,6 +67,7 @@ def print_search_index(search_index):
         print the search search_index
     '''
     for word in search_index:
+        print(search_index)
         for i in range(6):
             if search_index[word][i][1] == 0:
                 del(search_index[word][i])
