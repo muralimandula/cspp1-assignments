@@ -35,7 +35,7 @@ def build_search_index(cleaned_documents_list):
     for word in stop_words:
         if word in main_list:
             main_list.remove(word)
-    print(main_list)
+    # print(main_list)
 
     for word in set(main_list) :     # main list is the list of cleaned, unique words in lower case
 
@@ -57,7 +57,7 @@ def build_search_index(cleaned_documents_list):
     # print(search_engine_words)
 
     for key in search_engine_words:
-    	for i in range(len(key.values())):
+    	for i in range(len(cleaned_documents_list)):
     	    if search_engine_words[key][i][1] == 0:
     	        print(search_engine_words[key])
     # return search_index    
