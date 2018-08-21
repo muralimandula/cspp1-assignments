@@ -70,12 +70,8 @@ def print_search_index(search_index):
     # print(search_index)
     for key in keys:
         for i in range(6):
-            if search_index[key][i][1] != 0:
-                x = []
-                # for i, j in search_index[key]:
-                if search_index[key][1]!=0:
-                    x.append((search_index[key][0],search_index[key][1]))
-                print(key, " - ", x)
+            if search_index[key][i][1] == 0:
+                print(key, " - ", keys[key])
     # for key in search_index:
     #     while (0,0) in search_index[key]:
     #         search_index
