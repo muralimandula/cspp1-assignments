@@ -49,44 +49,13 @@ def build_search_index(cleaned_documents_list):
     
     # print(search_engine_words)
 
-    for key in search_engine_words:
-        print(key)
-        for i in range(6):
-            if search_engine_words[key][i][1] == 0:
-                # print(search_engine_words[key])
-                # del(search_engine_words[key])
-    # return search_index    
+    # for key in search_engine_words:
+    #     print(key)
+    #     for i in range(6):
+    #         if search_engine_words[key][i][1] == 0:
     return search_engine_words
 
-
-
-
-        # if word != "" and word not in stop_words:            # only, if not a stop word
-        #         if word not in search_engine_words:
-
-
-
-
     
-"""
-def tokenize(list_of_words_in_docs, index, search_engine_words):
-"""
-    # calculating the frequency
-"""
-    stop_words = load_stopwords('stopwords.txt')             # loading words from the .txt file
-    
-    for word in list_of_words_in_docs:
-        if word != "" and word not in stop_words:            # only, if not a stop word
-            if word not in search_engine_words:   
-                
-                             # adding non stop words into search engine
-                search_engine_words[word] = [0, 0]                       #### when not exist
-            search_engine_words[word][index] = search_engine_words[word][index]  1                        #### when already exists
-    
-    return search_engine_words                                     # return search engine of non stop words (Dictionary)
-"""
-
-
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -115,21 +84,9 @@ def word_list(documents_list):
         return a list of words
     '''
     regex = re.compile('[^a-z]')              # cap-'^' mean only, i.e., only a to z
-
     for i in range(len(documents_list)):
-
-        # print(len(documents_list), "89")
-        # print(i)
-
         for _ in range(len(documents_list[i])):
-
-            # print(len(documents_list[i]), "91")
-             # print(j)
             documents_list[i] = [regex.sub('', word.lower().strip()) for word in documents_list[i]]
-            # print(documents_list[i])
-   
-    # return [regex.sub('', word.strip()) for word in document[0].lower().split(' ')]
-    # print(documents_list)
     return documents_list
 
 # main function that loads the docs from files
