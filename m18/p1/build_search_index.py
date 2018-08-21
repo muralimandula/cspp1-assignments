@@ -69,7 +69,7 @@ def print_search_index(search_index):
     keys = sorted(search_index.keys())
     for key in keys:
         for i in range(6):
-            if key[i][1] == 0
+            if key[i][1] == 0:
                 print(key, " - ", search_index[key])
 
 
