@@ -38,20 +38,13 @@ def build_search_index(cleaned_documents_list):
     # print(main_list)
 
     for word in set(main_list) :     # main list is the list of cleaned, unique words in lower case
-
-            count0 = cleaned_documents_list[0].count(word)
-
-            count1 = cleaned_documents_list[1].count(word)
-
-            count2 = cleaned_documents_list[2].count(word)
-
-            count3 = cleaned_documents_list[3].count(word)
-
-            count4 = cleaned_documents_list[4].count(word)
-
-            count5 = cleaned_documents_list[5].count(word)
-
-            search_engine_words[word]=[(0, count0),(1, count1), (2, count2), (3, count3), (4, count4), (5, count5)]
+        count0 = cleaned_documents_list[0].count(word)
+        count1 = cleaned_documents_list[1].count(word)
+        count2 = cleaned_documents_list[2].count(word)
+        count3 = cleaned_documents_list[3].count(word)
+        count4 = cleaned_documents_list[4].count(word)
+        count5 = cleaned_documents_list[5].count(word)
+        search_engine_words[word]=[(0, count0),(1, count1), (2, count2), (3, count3), (4, count4), (5, count5)]
 
     
     # print(search_engine_words)
