@@ -66,13 +66,17 @@ def print_search_index(search_index):
     '''
         print the search search_index
     '''
+    for word in search_index:
+        for i in range(6):
+            if search_index[word][i][1] == 0:
+                del(search_index[word][i])
+
     keys = sorted(search_index.keys())
-    print(sorted(search_index))
-    # for key in keys:
-    #     for i in range(6):
-    #         if keys[key][i][1] == 0:
-    #             del(keys[key][i])
-    #     print(key, " - ", keys[key])
+    # print(sorted(search_index))
+    for key in keys:
+        print(key, " - ", keys[key])
+
+
     # for key in search_index:
     #     while (0,0) in search_index[key]:
     #         search_index
