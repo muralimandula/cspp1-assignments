@@ -51,10 +51,10 @@ def build_search_index(cleaned_documents_list):
 
     for key in search_engine_words:
         print(key)
-    	for i in range(6):
-    	    if search_engine_words[key][i][1] == 0:
-    	        # print(search_engine_words[key])
-    	        del(search_engine_words[key])
+        for i in range(6):
+            if search_engine_words[key][i][1] == 0:
+                # print(search_engine_words[key])
+                del(search_engine_words[key])
     # return search_index    
     return search_engine_words
 
