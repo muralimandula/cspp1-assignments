@@ -54,10 +54,10 @@ def build_search_index(cleaned_documents_list):
             search_engine_words[word]=[(0, count0),(1, count1), (2, count2), (3, count3), (4, count4), (5, count5)]
 
     
-    print(search_engine_words)
+    # print(search_engine_words)
 
     for key in search_engine_words:
-    	for i in range(len(key.values()))
+    	for i in range(len(key.values())):
     	    if search_engine_words[key][i][1] == 0
     	        print(search_engine_words[key])
     # return search_index    
