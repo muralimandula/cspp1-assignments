@@ -35,6 +35,7 @@ def build_search_index(cleaned_documents_list):
     for word in main_list:
         if word in stop_words:
             main_list.remove(word)
+    print(main_list)
 
     for word in main_list :     # main list is the list of cleaned, unique words in lower case
 
@@ -128,7 +129,7 @@ def word_list(documents_list):
             # print(documents_list[i])
    
     # return [regex.sub('', word.strip()) for word in document[0].lower().split(' ')]
-    print(documents_list)
+    # print(documents_list)
     return documents_list
 
 # main function that loads the docs from files
