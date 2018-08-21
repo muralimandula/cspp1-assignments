@@ -29,24 +29,25 @@ def build_search_index(cleaned_documents_list):
     search_engine_words = {}
     stop_words = load_stopwords('stopwords.txt')
     main_list = []
+    re_main_list = []
     for i in range(len(cleaned_documents_list)-1):
-        main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
-    main_list = set(main_list)                                                # unique words
+        main_list += cleaned_documents_list[i] + cleaned_documents_list[i+1]
+    # main_list = set(main_list)                                                # unique words
     for word in main_list:
-        if word in stop_words:
-            main_list.remove(word)
+        if word not in stop_words:
+            re_main_list.append(word)
     # print(main_list)
 
-    for word in main_list:     # main list is the list of cleaned, unique words in lower case
+    for word in set(re_main_list) :     # main list is the list of cleaned, unique words in lower case
         count0 = cleaned_documents_list[0].count(word)
         count1 = cleaned_documents_list[1].count(word)
         count2 = cleaned_documents_list[2].count(word)
         count3 = cleaned_documents_list[3].count(word)
         count4 = cleaned_documents_list[4].count(word)
         count5 = cleaned_documents_list[5].count(word)
-        search_engine_words[word]=[(0, count0),(1, count1), (2, count2), (3, count3), (4, count4), (5, count5)]
+        search_engine_words[word] = [(0, count0), (1, count1), (2, count2), (3, count3), (4, count4), (5, count5)]
 
-    
+
     # print(search_engine_words)
 
     # for key in search_engine_words:
@@ -55,7 +56,7 @@ def build_search_index(cleaned_documents_list):
     #         if search_engine_words[key][i][1] == 0:
     return search_engine_words
 
-    
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
