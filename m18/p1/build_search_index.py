@@ -32,7 +32,7 @@ def build_search_index(cleaned_documents_list):
     for i in range(len(cleaned_documents_list)-1):
         main_list += cleaned_documents_list[i] + cleaned_documents_list [i+1]
     # main_list = set(main_list)                                                # unique words
-    for word in stopwords:
+    for word in stop_words:
         if word in main_list:
             main_list.remove(word)
     print(main_list)
