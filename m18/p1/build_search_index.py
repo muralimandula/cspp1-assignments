@@ -67,7 +67,7 @@ def print_search_index(search_index):
         print the search search_index
     '''
     keys = sorted(search_index.keys())
-    print(search_index)
+    print(sorted(search_index))
     # for key in keys:
     #     for i in range(6):
     #         if keys[key][i][1] == 0:
