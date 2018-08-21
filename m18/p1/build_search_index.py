@@ -67,10 +67,11 @@ def print_search_index(search_index):
         print the search search_index
     '''
     keys = sorted(search_index.keys())
-    for key in keys:
-        for i in range(6):
-            if keys[key][i][1] == 0:
-                print(key, " - ", search_index[key])
+    print(search_index)
+    # for key in keys:
+    #     for i in range(6):
+    #         if keys[key][i][1] == 0:
+    #             print(key, " - ", search_index[key])
 
 
 def word_list(documents_list):
