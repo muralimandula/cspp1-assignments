@@ -50,14 +50,20 @@ def add_matrix(m_1, m_2):
        print("Error: Matrix shapes invalid for addition")
        return None
 
-    mat_add = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
-    for i, mat in enumerate(m_1):
-       for j, _ in enumerate(mat):
-           mat_add[i][j] = int(m_1[i][j]) + int(m_2[i][j])
-    return mat_add[:]
-    
+    # mat_add = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
+    # for i, mat in enumerate(m_1):
+    #    for j, _ in enumerate(mat):
+    #        mat_add[i][j] = int(m_1[i][j]) + int(m_2[i][j])
+    # return mat_add[:]
+    add_of_matrices =[]
+    for row in range(len(m_1)):
+        row_list = []
+        for column in range(len(m_1[0])):
+            row_list.append(int(m_1[row][column]) + int(m_2[row][column]))
+        add_of_matrices.append(row_list)
+    return add_of_matrices
 
-    
+
 def read_matrix(matrix_dimensions):
     '''
         read the matrix dimensions from input
