@@ -31,13 +31,14 @@ def add_matrix(m_1, m_2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     add_of_matrices = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
+    print(add_of_matrices)
     if len(m_1)*len(m_1[0]) != len(m_2)*len(m_2[0]):
         print("Error: Matrix shapes invalid for addition")
         return None
     for row in range(len(m_1)):
         for column in range(len(m_1[0])):
             add_of_matrices[row][column] = int(m_1[row][column]) + int(m_2[row][column])
-    return add_of_matrices
+    return add_of_matrices[:]
 
 def read_matrix(matrix_dimensions):
     '''
