@@ -17,10 +17,10 @@ def mult_matrix(m_1, m_2):
 
     for i in range(r_1):
         for j in range(c_2):
-            sum = 0
+            sum_add = 0
             for k in range(r_2):
-                sum += int(m_1[i][k])*int(m_2[k][j])
-            mul_of_matrices[i] += [sum]
+                sum_add += int(m_1[i][k])*int(m_2[k][j])
+            mul_of_matrices[i] += [sum_add]
     return mul_of_matrices
 
 def add_matrix(m_1, m_2):
