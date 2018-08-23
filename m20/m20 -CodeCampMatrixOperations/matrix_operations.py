@@ -1,3 +1,4 @@
+"""Matrix Operations"""
 def mult_matrix(m_1, m_2):
     '''
         check if the matrix_1 columns = matrix_2 rows
@@ -30,7 +31,6 @@ def add_matrix(m_1, m_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    """Code by GS"""
     if len(m_1) != len(m_2):  # no.of rows
         print("Error: Matrix shapes invalid for addition")
         return None
@@ -65,8 +65,9 @@ def read_matrix(matrix_dimensions):
     return matrix
 
 def main():
+    """Main function"""
     # read matrix 1
-    m_1=[]
+    m_1 = []
     # matrix_1_dimension = input("Enter no.of rows and columns of matrix 1 : ")
     m_1 = input().split(",")
     # print(m_1)
@@ -75,15 +76,15 @@ def main():
 
 
     # read matrix 2
-    m_2=[]
+    m_2 = []
     # matrix_2_dimension = input("Enter no.of rows and columns of matrix 2 : ")
     m_2 = input().split(",")
     matrix_2 = read_matrix(m_2)
 
 
     if matrix_1 is not None and matrix_2 is not None:
-       print(add_matrix(matrix_1, matrix_2))
-       print(mult_matrix(matrix_1, matrix_2))
+        print(add_matrix(matrix_1, matrix_2))
+        print(mult_matrix(matrix_1, matrix_2))
     # add matrix 1 and matrix 2
     # multiply matrix 1 and matrix 2
 if __name__ == '__main__':
