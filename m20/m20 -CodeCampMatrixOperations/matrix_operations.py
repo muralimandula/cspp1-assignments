@@ -30,32 +30,16 @@ def add_matrix(m_1, m_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    """My code"""
-    # add_of_matrices = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
-    # # print(add_of_matrices)
-    # if len(m_1)*len(m_1[0]) != len(m_2)*len(m_2[0]):
-    #     print("Error: Matrix shapes invalid for addition")
-    #     return None
-    # for row in range(len(m_1)):
-    #     for column in range(len(m_1[0])):
-    #         add_of_matrices[row][column] = int(m_1[row][column]) + int(m_2[row][column])
-    # return add_of_matrices
-
     """Code by GS"""
     if len(m_1) != len(m_2):  # no.of rows
-       print("Error: Matrix shapes invalid for addition")
-       return None
+        print("Error: Matrix shapes invalid for addition")
+        return None
 
     if len(m_1[0]) != len(m_2[0]):   #no.of columns
-       print("Error: Matrix shapes invalid for addition")
-       return None
+        print("Error: Matrix shapes invalid for addition")
+        return None
 
-    # mat_add = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
-    # for i, mat in enumerate(m_1):
-    #    for j, _ in enumerate(mat):
-    #        mat_add[i][j] = int(m_1[i][j]) + int(m_2[i][j])
-    # return mat_add[:]
-    add_of_matrices =[]
+    add_of_matrices = []
     for row in range(len(m_1)):
         row_list = []
         for column in range(len(m_1[0])):
@@ -72,20 +56,6 @@ def read_matrix(matrix_dimensions):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    # row = int(matrix_dimensions[0])
-    # column = int(matrix_dimensions[1])
-    # length_of_matrix = row*column
-    # matrix = []
-    # # print("\nEnter", column, "values for each of ", row, " rows below :")
-    # for each_row in range(row):
-    #     line = input().split()
-    #     matrix.append(line)
-    # # print(matrix, "\n")
-    # if length_of_matrix == len(matrix)*len(matrix[0]):
-    #     return matrix
-    # print("Error: Invalid input for the matrix")
-    # return None
-    
     matrix = []
     for i in range(int(matrix_dimensions[0])):
         matrix += [[int(var) for var in input().split(" ")]]
@@ -93,8 +63,6 @@ def read_matrix(matrix_dimensions):
             print("Error: Invalid input for the matrix")
             return None
     return matrix
-
-    # pass
 
 def main():
     # read matrix 1
@@ -112,7 +80,7 @@ def main():
     m_2 = input().split(",")
     matrix_2 = read_matrix(m_2)
 
- 
+
     if matrix_1 is not None and matrix_2 is not None:
        print(add_matrix(matrix_1, matrix_2))
        print(mult_matrix(matrix_1, matrix_2))
