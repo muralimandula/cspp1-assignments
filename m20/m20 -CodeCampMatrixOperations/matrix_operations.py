@@ -30,16 +30,34 @@ def add_matrix(m_1, m_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    add_of_matrices = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
-    # print(add_of_matrices)
-    if len(m_1)*len(m_1[0]) != len(m_2)*len(m_2[0]):
-        print("Error: Matrix shapes invalid for addition")
-        return None
-    for row in range(len(m_1)):
-        for column in range(len(m_1[0])):
-            add_of_matrices[row][column] = int(m_1[row][column]) + int(m_2[row][column])
-    return add_of_matrices[:]
+    """My code"""
+    # add_of_matrices = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
+    # # print(add_of_matrices)
+    # if len(m_1)*len(m_1[0]) != len(m_2)*len(m_2[0]):
+    #     print("Error: Matrix shapes invalid for addition")
+    #     return None
+    # for row in range(len(m_1)):
+    #     for column in range(len(m_1[0])):
+    #         add_of_matrices[row][column] = int(m_1[row][column]) + int(m_2[row][column])
+    # return add_of_matrices
 
+    """Code by GS"""
+    if len(m_1) != len(m_2):  # no.of rows
+       print("Error: Matrix shapes invalid for addition")
+       return None
+
+    if len(m_1[0]) != len(m_2[0]):   #no.of columns
+       print("Error: Matrix shapes invalid for addition")
+       return None
+
+    mat_add = [[0 for j in range(len(m_1[0]))] for i in range(len(m_1))]
+    for i, mat in enumerate(m_1):
+       for j, _ in enumerate(mat):
+           mat_add[i][j] = int(m_1[i][j]) + int(m_2[i][j])
+    return mat_add[:]
+    
+
+    
 def read_matrix(matrix_dimensions):
     '''
         read the matrix dimensions from input
