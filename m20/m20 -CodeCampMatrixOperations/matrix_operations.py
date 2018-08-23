@@ -8,16 +8,16 @@ def mult_matrix(m_1, m_2):
     '''
     # pass
 
-    r1, c1, r2, c2 = len(m_1), len(m_1[0]), len(m_2), len(m_2[0])
-    mul_of_matrices = [[] for i in range(r1)]
-    if c1 != r2:
+    r_1, c_1, r_2, c_2 = len(m_1), len(m_1[0]), len(m_2), len(m_2[0])
+    mul_of_matrices = [[] for i in range(r_1)]
+    if c_1 != r_2:
         print("Error: Matrix shapes invalid for mult")
         return None
 
-    for i in range(r1):
-        for j in range(c2):
+    for i in range(r_1):
+        for j in range(c_2):
             sum = 0
-            for k in range(r2):
+            for k in range(r_2):
                 sum += int(m_1[i][k])*int(m_2[k][j])
             mul_of_matrices[i] += [sum]
     return mul_of_matrices
@@ -84,6 +84,7 @@ def read_matrix(matrix_dimensions):
     if length_of_matrix == len(matrix)*len(matrix[0]):
         return matrix
     print("Error: Invalid input for the matrix")
+    return None
 
 
     # pass
