@@ -72,20 +72,27 @@ def read_matrix(matrix_dimensions):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    row = int(matrix_dimensions[0])
-    column = int(matrix_dimensions[1])
-    length_of_matrix = row*column
+    # row = int(matrix_dimensions[0])
+    # column = int(matrix_dimensions[1])
+    # length_of_matrix = row*column
+    # matrix = []
+    # # print("\nEnter", column, "values for each of ", row, " rows below :")
+    # for each_row in range(row):
+    #     line = input().split()
+    #     matrix.append(line)
+    # # print(matrix, "\n")
+    # if length_of_matrix == len(matrix)*len(matrix[0]):
+    #     return matrix
+    # print("Error: Invalid input for the matrix")
+    # return None
+    
     matrix = []
-    # print("\nEnter", column, "values for each of ", row, " rows below :")
-    for each_row in range(row):
-        line = input().split()
-        matrix.append(line)
-    # print(matrix, "\n")
-    if length_of_matrix == len(matrix)*len(matrix[0]):
-        return matrix
-    print("Error: Invalid input for the matrix")
-    return None
-
+    for i in range(int(matrix_dimensions[0])):
+        matrix += [[int(var) for var in input().split(" ")]]
+        if len(matrix[i]) != int(matrix_dimensions[1]):
+            print("Error: Invalid input for the matrix")
+            return None
+    return matrix
 
     # pass
 
