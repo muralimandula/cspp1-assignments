@@ -80,12 +80,11 @@ def main():
     m_2 = input().split(",")
     matrix_2 = read_matrix(m_2)
 
+ 
+    if matrix_1 is not None and matrix_2 is not None:
+       print(add_matrix(matrix_1, matrix_2))
+       print(mult_matrix(matrix_1, matrix_2))
     # add matrix 1 and matrix 2
-    print(add_matrix(matrix_1, matrix_2))
-
     # multiply matrix 1 and matrix 2
-    # pass
-    print(mult_matrix(matrix_1, matrix_2))
-
 if __name__ == '__main__':
     main()
