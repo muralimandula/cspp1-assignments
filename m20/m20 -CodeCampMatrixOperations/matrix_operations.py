@@ -8,7 +8,6 @@ def mult_matrix(m_1, m_2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     # pass
-
     r_1, c_1, r_2, c_2 = len(m_1), len(m_1[0]), len(m_2), len(m_2[0])
     mul_of_matrices = [[] for i in range(r_1)]
     if c_1 != r_2:
@@ -58,6 +57,8 @@ def read_matrix(matrix_dimensions):
     '''
     matrix = []
     for i in range(int(matrix_dimensions[0])):
+        # row_list = input().split(" ")
+        # matrix.append(row_list)
         matrix += [[int(var) for var in input().split(" ")]]
         if len(matrix[i]) != int(matrix_dimensions[1]):
             print("Error: Invalid input for the matrix")
