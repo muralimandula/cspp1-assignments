@@ -80,6 +80,7 @@ def diagonal_right_to_left(game_grid):
     return None
 
 def play_game(game_grid):
+    '''its playing game'''
     return is_valid_game(game_grid) or horizontal_check(game_grid) or \
     vertical_check(game_grid) or diagonal_left_to_right(game_grid) or \
     diagonal_right_to_left(game_grid) or "draw"
@@ -87,8 +88,8 @@ def play_game(game_grid):
 
 
 
-grid_lines = 3
-input_grid = []
-for _ in range(grid_lines):
-    input_grid.append(input().split())
-print(play_game(input_grid))
+GRID_LINES = 3
+INPUT_GRID = []
+for _ in range(GRID_LINES):
+    INPUT_GRID.append(input().split())
+print(play_game(INPUT_GRID))
