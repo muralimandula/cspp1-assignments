@@ -31,7 +31,7 @@ def horizontal_check(game_grid):
 def vertical_check(game_grid):
 	'''checks vertical'''
 	win_count = 0
-	win_flag = game_grid[0][i]
+	win_flag = game_grid[0][0]
 	grid_length = len(game_grid)
 	for i in range(grid_length):
 		if win_count == 3:
