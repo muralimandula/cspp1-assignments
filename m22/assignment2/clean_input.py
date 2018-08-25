@@ -11,8 +11,8 @@ import re
 
 def clean_string(string):
     """cleaning the input"""
-    cleanup = re.compile('[^a-z A-Z 0-9]')
-    string = cleanup.string
+    cleanup = re.compile('[^a-zA-Z0-9]')
+    string = cleanup.sub('', string)
     return string
 
 def main():
