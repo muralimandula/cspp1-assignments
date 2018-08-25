@@ -10,13 +10,13 @@ alphabets in both upper and lower case and numbers.
 import re
 
 def clean_string(string):
-	"""cleaning the input"""
+    """cleaning the input"""
     cleanup = re.compile('[^a-z A-Z 0-9]')
     string = cleanup.sub('', string)
     return string
 
 def main():
-	"""Main function"""
+    """Main function"""
     string = input()
     print(clean_string(string))
 
