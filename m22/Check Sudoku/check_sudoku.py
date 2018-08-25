@@ -29,9 +29,7 @@ def check_sudoku(sudoku):
 
     # for first Horizontal 3*3 grid
     if ("".join(sorted(sudoku[0][0]+sudoku[0][1]+sudoku[0][2]+ sudoku[1][0]+ sudoku[1][1]+sudoku[1][2]+sudoku[2][0]+sudoku[2][1]+sudoku[2][2])) != "123456789") or \
-        # return False
         ("".join(sorted(sudoku[0][3]+sudoku[0][4]+sudoku[0][5]+ sudoku[1][3]+ sudoku[1][4]+sudoku[1][5]+sudoku[2][3]+sudoku[2][4]+sudoku[2][5])) != "123456789") or \
-        # return False  
         ("".join(sorted(sudoku[0][6]+sudoku[0][7]+sudoku[0][8]+ sudoku[1][6]+ sudoku[1][7]+sudoku[1][8]+sudoku[2][6]+sudoku[2][7]+sudoku[2][8])) != "123456789"):
             return False 
 
