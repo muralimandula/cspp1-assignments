@@ -6,8 +6,13 @@ each word
 def tokenize(input_list):
     """tokenize or word frequency"""
     input_dict = {}
-    for each_word in set(input_list):
-        input_dict[each_word] = input_list.count(each_word)
+    # for each_word in set(input_list):
+    #     input_dict[each_word] = input_list.count(each_word)
+
+    for each_word in input_list:
+        if each_word not in input_dict:
+            input_dict[each_word] = 1
+        input_dict[each_word] += 1
 
     return input_dict
 
