@@ -16,7 +16,7 @@ def main():
     """Main FUnction"""
     no_of_lines = int(input())
     input_list = []
-    for _ in ranage(no_of_lines):
+    for _ in range(no_of_lines):
         input_list = input().split()   # list of lists
 
     print(tokenize(input_list))
