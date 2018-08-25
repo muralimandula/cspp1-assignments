@@ -12,7 +12,7 @@ import re
 def clean_string(string):
     """cleaning the input"""
     cleanup = re.compile('[^a-z A-Z 0-9]')
-    string = cleanup.sub('', string)
+    string = cleanup.string
     return string
 
 def main():
