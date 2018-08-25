@@ -6,7 +6,7 @@ def main():
     """main function"""
     no_of_lines = int(input())
     for _ in range(no_of_lines):
-        string=""
+        string = ""
         string += input()
         print(string)
 
