@@ -1,5 +1,5 @@
 '''
-Write a function to clean up a given string by removing the special characters and retain 
+Write a function to clean up a given string by removing the special characters and retain
 alphabets in both upper and lower case and numbers.
 '''
 
@@ -8,12 +8,15 @@ alphabets in both upper and lower case and numbers.
     # return [regex.sub('', word.strip()) for word in input_value.lower().split(' ')]
 
 import re
+
 def clean_string(string):
+	"""cleaning the input"""
     cleanup = re.compile('[^a-z A-Z 0-9]')
-    string = [cleanup.sub('', string)]
+    string = cleanup.sub('', string)
     return string
 
 def main():
+	"""Main function"""
     string = input()
     print(clean_string(string))
 
