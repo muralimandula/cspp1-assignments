@@ -12,7 +12,8 @@ def tokenize(input_list):
     for each_word in input_list:
         if each_word not in input_dict:
             input_dict[each_word] = 1
-        input_dict[each_word] += 1
+        else:
+            input_dict[each_word] += 1
 
     return input_dict
 
