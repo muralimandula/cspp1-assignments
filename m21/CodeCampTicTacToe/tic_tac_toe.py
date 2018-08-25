@@ -86,10 +86,11 @@ def play_game(game_grid):
     diagonal_right_to_left(game_grid) or "draw"
 
 
+def main():
+    GRID_LINES = 3
+    INPUT_GRID = []
+    for _ in range(GRID_LINES):
+        INPUT_GRID.append(input().split())
+    print(play_game(INPUT_GRID))
 
-
-GRID_LINES = 3
-INPUT_GRID = []
-for _ in range(GRID_LINES):
-    INPUT_GRID.append(input().split())
-print(play_game(INPUT_GRID))
+main()
