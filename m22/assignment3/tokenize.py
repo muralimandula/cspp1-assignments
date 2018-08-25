@@ -20,7 +20,7 @@ def tokenize(input_list):
 
 def clean_string(input_list):
     """cleaning the input"""
-    cleanup = re.compile('[^a-zA-Z ]')
+    cleanup = re.compile('[^a-zA-Z0-9 ]')
     input_list = [cleanup.sub('', word) for word in input_list]
     return input_list
             
