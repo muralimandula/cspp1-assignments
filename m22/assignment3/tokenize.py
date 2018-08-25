@@ -17,15 +17,25 @@ def tokenize(input_list):
 
     return input_dict
 
+def clean_string(input_list):
+    """cleaning the input"""
+    cleanup = re.compile('[^a-zA-Z ]')
+    input_list = [cleanup.sub('', word) for word in input_list]
+    return input_list
             
 def main():
     """Main FUnction"""
     no_of_lines = int(input())
     input_list = []
-    for _ in range(no_of_lines):
-        input_list = input().split()   # list of lists
+    if no_of_lines = 1:
+        for _ in range(no_of_lines):
+            input_list = input().split()   # list
+    else:
+        for _ in range(no_of_lines):
+            input_list.append(input().split())  # list of lists
+        input_list = input_list[0] + input_list[1]
 
-    print(tokenize(input_list))
+    print(tokenize(clean_string(input_list)))
 
 if __name__ == '__main__':
     main()
