@@ -23,7 +23,7 @@ def clean_string(input_list):
     cleanup = re.compile('[^a-zA-Z0-9 ]')
     input_list = [cleanup.sub('', word) for word in input_list]
     return input_list
-    
+
 def main():
     """Main FUnction"""
     no_of_lines = int(input())
