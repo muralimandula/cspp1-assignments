@@ -11,7 +11,7 @@ def print_dictionary(dictionary):
 
 def main():
     """Main function"""
-    dictionary = eval(raw_input())
+    dictionary = eval(input())
     print_dictionary(dictionary)
 
 if __name__ == '__main__':
