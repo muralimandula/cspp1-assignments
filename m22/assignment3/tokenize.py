@@ -27,7 +27,7 @@ def main():
     """Main FUnction"""
     no_of_lines = int(input())
     input_list = []
-    if no_of_lines = 1:
+    if no_of_lines == 1:
         for _ in range(no_of_lines):
             input_list = input().split()   # list
     else:
