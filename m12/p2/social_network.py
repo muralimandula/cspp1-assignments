@@ -66,7 +66,7 @@ def main():
         if command_split[0] == "follow":
             network1 = follow(network, command_split[1], command_split[2])
         elif command_split[0] == "unfollow":
-            network = unfollow(network, command_split[1], command_split[2])
+            network1 = unfollow(network, command_split[1], command_split[2])
         elif command_split[0] == "delete":
             network1 = delete_person(network1, command_split[1])
 
