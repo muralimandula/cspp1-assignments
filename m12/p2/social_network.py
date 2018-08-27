@@ -57,7 +57,7 @@ def main():
     '''
         handling testcase input and printing command
     '''
-    network = {}
+    network = input()
     no_of_commands = int(input())
     for _ in range(int(no_of_commands)):
         command = input()
