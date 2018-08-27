@@ -15,8 +15,8 @@ def follow(network, arg1, arg2):
     '''
     # remove the pass below and start writing your code
     if arg1 in network:
-        print(arg1)
-        print(arg2)
+        # print(arg1)
+        # print(arg2)
         network[arg1].append(arg2)
     return network
 
@@ -46,9 +46,9 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    print(type(network))
+    # print(type(network))
     if arg1 in network:
-        del network[arg1]
+        del(network[arg1])
     for key in network:
         if arg1 in network[key]:
             network[key].remove(arg1)
@@ -58,19 +58,20 @@ def main():
         handling testcase input and printing command
     '''
     network = input()
-    print(network)
+    # print(network)
     no_of_commands = int(input())
     for _ in range(int(no_of_commands)):
         command = input()
         command_split = command.split(" ")
+
         if command_split[0] == "follow":
-            print("66", (network))
+            # print("66", (network))
             network = follow(network, command_split[1], command_split[2])
         elif command_split[0] == "unfollow":
-            print("69", (network))
+            # print("69", (network))
             network = unfollow(network, command_split[1], command_split[2])
         elif command_split[0] == "delete":
-            print("72", (network))
+            # print("72", (network))
             network = delete_person(network, command_split[1])
 
     print(network)
