@@ -58,18 +58,19 @@ def main():
         handling testcase input and printing command
     '''
     network = input()
+    network1 = {}
     no_of_commands = int(input())
     for _ in range(int(no_of_commands)):
         command = input()
         command_split = command.split(" ")
         if command_split[0] == "follow":
-            network = follow(network, command_split[1], command_split[2])
+            network1 = follow(network, command_split[1], command_split[2])
         elif command_split[0] == "unfollow":
             network = unfollow(network, command_split[1], command_split[2])
         elif command_split[0] == "delete":
-            network = delete_person(network, command_split[1])
+            network1 = delete_person(network1, command_split[1])
 
-    print(network)
+    print(network1)
 
 if __name__ == "__main__":
     main()
