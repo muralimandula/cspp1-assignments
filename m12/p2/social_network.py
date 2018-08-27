@@ -63,13 +63,13 @@ def main():
         command = input()
         command_split = command.split(" ")
         if command_split[0] == "follow":
-		    print("66",type(network))
+            print("66",type(network))
             network = follow(network, command_split[1], command_split[2])
         elif command_split[0] == "unfollow":
-		    print("69",type(network))
+            print("69",type(network))
             network = unfollow(network, command_split[1], command_split[2])
         elif command_split[0] == "delete":
-		    print("72",type(network))
+            print("72",type(network))
             network = delete_person(network, command_split[1])
 
     print(network)
